@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Internal, External, Inline Style</title>
+  <!-- internal style -->
+  <style>
+    .internal {
+      width: 400px;
+      height: 400px;
+      background-color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" style="display: flex;">
+    <!-- inline syle -->
+    <div class="inline" style="width: 500px; height: 500px; background-color: aquamarine;"></div>
+
+    <div class="internal"></div>
+    <div class="external"></div>
+
+  </div>
+</body>
+
+</html>

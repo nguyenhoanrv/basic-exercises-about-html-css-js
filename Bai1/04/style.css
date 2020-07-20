@@ -1,0 +1,43 @@
+.container {
+  width: 80%;
+  height: 100vh;
+  margin: auto;
+  background-color: cornsilk;
+}
+a{
+  font-size: 20px;
+}
+a:hover {
+  color: red;
+}
+h1 {
+  color: red;
+}
+
+.container > ul {
+  color: aqua;
+}
+
+#image {
+  width: 100px;
+  height: 100px;
+}
+
+.container ul>li:nth-child(2n +1) {
+  color: greenyellow;
+}
+.content::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: grey;
+}
+
+.content::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: chocolate;
+}
