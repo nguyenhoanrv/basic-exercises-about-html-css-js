@@ -1,0 +1,27 @@
+div {
+  display: flex;
+  justify-content: space-between ;
+  flex-wrap: wrap;
+}
+div>span {
+  display: block;
+  width: 100px;
+  height: 100px;
+  border: 2px solid blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div>span:nth-child(2n) {
+  background-color: blue;
+}
+div>span:nth-child(2n+1) {
+  background-color: red;
+}
+span {
+  display: inline-block;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: chartreuse;
+}
