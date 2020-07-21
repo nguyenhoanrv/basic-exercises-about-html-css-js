@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Login</title>
+</head>
+
+<body>
+  <button id="loginButton" onclick="document.getElementById('login').style.display = 'block'">Đăng nhập hệ
+    thống</button>
+  <div id="login">
+    <div class="form-login">
+      <span class="close" onclick="document.getElementById('login').style.display = 'none'">x</span>
+      <h3>Member Login</h3>
+      <form onsubmit="return check === 1 ? onSubmit1() : onSubmit()">
+        <div class="username">
+          <input type="text" placeholder="Username">
+          <div class="err err1"></div>
+        </div>
+        <div class="password">
+          <input type="password" placeholder="Password">
+          <div class="err err2"></div>
+        </div>
+        <input type="submit" id="button" value="Login">
+        <div class="success"></div>
+      </form>
+      <button id="forgot" onclick="return onClick()">Forgot Password?</button>
+    </div>
+  </div>
+  <script src=" index.js"></script>
+
+</body>
+
+</html>
