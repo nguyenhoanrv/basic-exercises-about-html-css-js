@@ -1,5 +1,5 @@
 const username = "admin";
-var password;
+let password;
 var err = document.getElementsByClassName("err");
 var sucess = document.getElementsByClassName("success")[0];
 var input = document.getElementsByTagName("input"),
@@ -8,19 +8,17 @@ var input = document.getElementsByTagName("input"),
   submit = input[2];
 var check = 0;
 function onSubmit() {
-  password = localStorage.getItem("password") || "admin"
+  password = localStorage.getItem("password3") || 'admin';
   if (inputName.value == "") {
     err[0].innerHTML = "Please enter a username";
     inputName.focus();
-    return false
+    return false;
   } else err[0].innerHTML = "";
   if (inputPass.value == "") {
     err[1].innerHTML = "Please enter a password";
     inputPass.focus();
     return false;
   } else err[1].innerHTML = "";
-
-
 
   if (inputName.value == username && inputPass.value == password) {
     document.getElementById("loginButton").innerHTML = "Đăng nhập thành công";
@@ -50,7 +48,21 @@ function onClick() {
   inputPass.value = "";
 }
 
+function onClick2() {
+  err[0].innerHTML = "";
+  err[1].innerHTML = "";
+  sucess.innerHTML = "";
+  check = 1;
+  inputName.type = "text";
+  inputName.placeholder = "Username";
+  inputPass.placeholder = "Password";
+  submit.value = "Login";
+  inputName.value = "";
+  inputPass.value = "";
+  document.getElementById('login').style.display = 'none', check = 0;
+}
 function onSubmit1() {
+  password = localStorage.getItem("password3") || 'admin';
   if (inputName.value == '') {
     err[0].innerHTML = "Please enter a old password";
     inputName.focus();
@@ -72,7 +84,7 @@ function onSubmit1() {
     inputPass.placeholder = "Password";
     submit.value = "Login";
     sucess.innerHTML = "Change password successfully";
-    localStorage.setItem("password", inputPass.value);
+    localStorage.setItem("password3", inputPass.value);
     inputName.value = "";
     inputPass.value = "";
     check = 0;
